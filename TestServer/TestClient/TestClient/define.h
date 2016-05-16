@@ -1,0 +1,3 @@
+#define BUF_SIZE 1024
+#define PORT 8111
+#define SERVERIP "202.117.10.83"
