@@ -40,28 +40,35 @@ int getConn(){
 
 			SOCKADDR_IN  addrServ;
 			addrServ.sin_addr.S_un.S_addr = inet_addr("202.117.10.83");
-			//addrServ.sin_addr.S_un.S_addr = inet_addr("127.0.0.1");
 			addrServ.sin_family = AF_INET;
-			addrServ.sin_port = htons(PORT);
+			addrServ.sin_port = htons(12306);
 				
 			retVal = connect(sockClient,(SOCKADDR*)&addrServ,sizeof(SOCKADDR));
 			if(retVal>0){
 				printf("socket connect succedd! socket retVal=%d\n",retVal);
 			}
+
 			char recvBuffer[BUF_SIZE];
+
 			memset(recvBuffer,0,sizeof(recvBuffer));
 			recv(sockClient,recvBuffer,BUF_SIZE,0);
 			printf("%s\n",recvBuffer);
-			send(sockClient,"This is Claire",strlen("This is Claire")+1,0);
+			send(sockClient,recvBuffer,sizeof(recvBuffer),0);
 	//		closesocket(sockClient);
 		//	WSACleanup();
 			return sockClient;
+}
+
+void closeSocket(int fd){
+	closesocket(sockClient);
+	WSACleanup();
 }
 
 int _tmain(int argc, _TCHAR* argv[])
 {
 	int fd;
 	fd = getConn();
+	
 	Json::Value root;
 	root["m_object"] = Json::Value("CallService");
 	root["m_op"] = Json::Value("selectMr");
@@ -72,9 +79,9 @@ int _tmain(int argc, _TCHAR* argv[])
 	strcpy(sendBuf,(fw.write(root)).c_str());
 	//发送数据
 	sendBuf[strlen(sendBuf)] = '\0';
-	send(fd,sendBuf,strlen(sendBuf)+1,0);
+	send(fd,sendBuf,strlen(sendBuf)+1,0);*/
 	
-	/*
+	
 	//接收数据
 	char recvBuf[1024];
 	int end = recv(sockClient,recvBuf,1024,0);
@@ -84,9 +91,8 @@ int _tmain(int argc, _TCHAR* argv[])
 	char * stemp = U2G(recvBuf);
 	string ltate = root["code"].asString(); 
 	const char * logstate = ltate.c_str();
-	*/
-		//closesocket(sockClient);
-	//	WSACleanup();
+	
+	closesocket(fd);
 	printf("i'm here\n");
 	system("pause");
 	return 0;

@@ -7,7 +7,7 @@
 #include <Winsock2.h>
 #include <stdio.h>
 #include <stdlib.h>
-#define PORT  8111
+#define PORT  12306
 
 void main()
 {

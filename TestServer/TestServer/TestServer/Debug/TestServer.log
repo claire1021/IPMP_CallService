@@ -1,4 +1,4 @@
-﻿生成启动时间为 2016/5/16 5:00:48。
+﻿生成启动时间为 2016/5/18 5:39:52。
      1>项目“F:\IPMP_CallService\TestServer\TestServer\TestServer\TestServer.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
          正在创建“Debug\TestServer.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
@@ -27,4 +27,4 @@
 
 生成成功。
 
-已用时间 00:00:00.75
+已用时间 00:00:00.70

@@ -9,7 +9,7 @@
 #include <stdlib.h>
 #include<string>
 #include"../json/json.h"
-#define PORT  8111
+#define PORT  12306
 using namespace std;
 void main()
 {
@@ -53,18 +53,17 @@ void main()
 		char sendBuf[100] ;
 		memset(sendBuf, 0, 100);
 		int r = 0;
+
+		/*
 		do {///不断得到客户端发来的请求
   
-  
-		   sprintf( sendBuf , "Weclome %s to here:" , inet_ntoa(addrClient.sin_addr) ) ;
-		   printf("sending.....\n");
-		   r = send( sockConn , sendBuf , strlen(sendBuf)+1 , 0 ) ;
-		   printf("send end.....\n");
+ 
 		   //接收数据
 		   char recvBuf[1024] ;
 		   memset(recvBuf,0,sizeof(recvBuf));
 		   printf("receiving.....\n");
 		    r = recv( sockConn , recvBuf ,sizeof(recvBuf), 0 ) ;
+			//解析json
 			Json::Reader reader;
 			Json::Value root;
 			if(reader.parse(recvBuf,root));
@@ -74,15 +73,44 @@ void main()
 				cout<<"m_object="<<m_object<<endl;
 				cout<<"m_op="<<m_op<<endl;
 			}
-			/*
-			{"m_op"       :   "selectMr",
-				"m_object" :  "CallService"}*/
-
+			printf("data from client: %s\n" , recvBuf ) ;
 		    printf("receive end.....\n");
-		    printf("data from client: %s\n" , recvBuf ) ;
+		    
+	      //发送数据
+		  printf("sending.....\n");
+	      r = send( sockConn , "200", 5 , 0 ) ;
+		printf("send end.....\n");
+
 		   
 		}while ( r != SOCKET_ERROR );
-		printf("client connect error! app will exit\n");
+		*/
+
+
+		//接收数据
+		char recvBuf[1024] ;
+		memset(recvBuf,0,sizeof(recvBuf));
+		printf("receiving.....\n");
+		r = recv( sockConn , recvBuf ,sizeof(recvBuf), 0 ) ;
+		//解析json
+		Json::Reader reader;
+		Json::Value root;
+		Json::FastWriter fw;
+		if(reader.parse(recvBuf,root));
+		{
+			string m_object = root["m_object"].asString();
+			string m_op = root["m_op"].asString();
+			cout<<"m_object="<<m_object<<endl;
+			cout<<"m_op="<<m_op<<endl;
+		}
+		printf("data from client: %s\n" , recvBuf ) ;
+		printf("receive end.....\n");
+
+		//发送数据
+	
+	
+		printf("sending.....\n");
+		r = send( sockConn , "200", 5 , 0 ) ;
+		printf("send end.....\n");
 		system("PAUSE");
 		//关闭socket
 		closesocket( sockConn ) ;
