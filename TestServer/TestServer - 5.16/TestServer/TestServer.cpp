@@ -66,6 +66,7 @@ void main()
 			//½âÎöjson
 			Json::Reader reader;
 			Json::Value root;
+			Json::FastWriter fw;
 			if(reader.parse(recvBuf,root));
 			{
 				string m_object = root["m_object"].asString();
@@ -111,6 +112,8 @@ void main()
 		printf("sending.....\n");
 		r = send( sockConn , "200", 5 , 0 ) ;
 		printf("send end.....\n");
+
+
 		system("PAUSE");
 		//¹Ø±Õsocket
 		closesocket( sockConn ) ;

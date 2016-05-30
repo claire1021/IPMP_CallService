@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window >
+	<Option name="option" width="171" height="42" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" font="0" align="center" endellipsis="true" normalimage="file='pic/tab_btn_01.png' dest='0,0,167,42'" hotimage="file=&apos;pic/tab_btn_01.png&apos; fade=&apos;100&apos; dest='0,0,167,42' " group="manage"  selectedimage="file='pic/tab_btn_02.png' dest='0,0,167,42' "  />
+</Window> 

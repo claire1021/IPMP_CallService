@@ -1,0 +1,61 @@
+﻿生成启动时间为 2016/5/27 11:03:30。
+     1>项目“F:\IPMP_CallService\TestServer\TabTest\DuiLib\DuiLib.vcxproj”在节点 2 上(rebuild 个目标)。
+     1>_PrepareForClean:
+         正在删除文件“.\Debug\DuiLib.lastbuildstate”。
+       InitializeBuildStatus:
+         正在对“.\Debug\DuiLib.unsuccessfulbuild”执行 Touch 任务。
+       ClCompile:
+         d:\VS2010\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D UILIB_EXPORTS /D _VC80_UPGRADE=0x0600 /D _WINDLL /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp".\DebugDuiLib.pch" /Fo".\Debug\\" /Fd".\Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt StdAfx.cpp
+         StdAfx.cpp
+         d:\VS2010\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D UILIB_EXPORTS /D _VC80_UPGRADE=0x0600 /D _WINDLL /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp".\DebugDuiLib.pch" /Fo".\Debug\\" /Fd".\Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Control\UIAnimation.cpp Control\UIMenu.cpp Control\UITimeEdit.cpp Control\UITransEdit.cpp Layout\UISlightTabLayout.cpp Layout\UISlippingTabLayout.cpp UIlib.cpp Utils\WinImplBase.cpp Utils\UIDelegate.cpp Utils\Utils.cpp Utils\WndShadow.cpp Core\UIBase.cpp Core\UIContainer.cpp Core\UIControl.cpp Core\UIDlgBuilder.cpp Core\UIManager.cpp Core\UIMarkup.cpp Core\UIRender.cpp Layout\UIChildLayout.cpp Layout\UIHorizontalLayout.cpp Layout\UITabLayout.cpp Layout\UITileLayout.cpp Layout\UIVerticalLayout.cpp Control\UIActiveX.cpp Control\UIButton.cpp Control\UICheckBox.cpp Control\UICombo.cpp Control\UIDateTime.cpp Control\UIEdit.cpp Control\UILabel.cpp Control\UIList.cpp Control\UIOption.cpp Control\UIProgress.cpp Control\UIRichEdit.cpp Control\UIScrollBar.cpp Control\UISlider.cpp Control\UIText.cpp Control\UITreeView.cpp Control\UIWebBrowser.cpp
+         UIWebBrowser.cpp
+         UITreeView.cpp
+         UIText.cpp
+         UISlider.cpp
+         UIScrollBar.cpp
+         UIRichEdit.cpp
+         UIProgress.cpp
+         UIOption.cpp
+         UIList.cpp
+         UILabel.cpp
+         UIEdit.cpp
+         UIDateTime.cpp
+         UICombo.cpp
+         UICheckBox.cpp
+         UIButton.cpp
+         UIActiveX.cpp
+         UIVerticalLayout.cpp
+         UITileLayout.cpp
+         UITabLayout.cpp
+         UIHorizontalLayout.cpp
+         正在生成代码...
+         正在编译...
+         UIChildLayout.cpp
+         UIRender.cpp
+         UIMarkup.cpp
+         UIManager.cpp
+         UIDlgBuilder.cpp
+         UIControl.cpp
+         UIContainer.cpp
+         UIBase.cpp
+         WndShadow.cpp
+         Utils.cpp
+         UIDelegate.cpp
+         WinImplBase.cpp
+     1>Utils\WinImplBase.cpp(40): error C2039: “find”: 不是“std”的成员
+     1>Utils\WinImplBase.cpp(40): error C3861: “find”: 找不到标识符
+     1>Utils\WinImplBase.cpp(48): error C2039: “find”: 不是“std”的成员
+     1>Utils\WinImplBase.cpp(48): error C3861: “find”: 找不到标识符
+         UIlib.cpp
+         UISlippingTabLayout.cpp
+         UISlightTabLayout.cpp
+         UITransEdit.cpp
+         UITimeEdit.cpp
+         UIMenu.cpp
+         UIAnimation.cpp
+         正在生成代码...
+     1>已完成生成项目“F:\IPMP_CallService\TestServer\TabTest\DuiLib\DuiLib.vcxproj”(rebuild 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:03.96

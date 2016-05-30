@@ -1,0 +1,111 @@
+﻿生成启动时间为 2016/5/12 11:52:45。
+     1>项目“E:\s_imms2.0\trunk\IMMS Control\DuiLib\DuiLib.vcxproj”在节点 2 上(Rebuild 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /nologo /W3 /WX- /O1 /Ob1 /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D UILIB_EXPORTS /D _VC80_UPGRADE=0x0600 /D _WINDLL /D _MBCS /GF /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp".\Build\Release_u/DuiLib.pch" /Fo".\Release\\" /Fd".\Release\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt StdAfx.cpp
+         StdAfx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /nologo /W3 /WX- /O1 /Ob1 /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D UILIB_EXPORTS /D _VC80_UPGRADE=0x0600 /D _WINDLL /D _MBCS /GF /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp".\Build\Release_u/DuiLib.pch" /Fo".\Release\\" /Fd".\Release\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Control\UIAnimation.cpp Control\UIMenu.cpp Control\UITimeEdit.cpp Control\UITransEdit.cpp Layout\UISlightTabLayout.cpp Layout\UISlippingTabLayout.cpp UIlib.cpp Utils\WinImplBase.cpp Utils\UIDelegate.cpp Utils\Utils.cpp Utils\WndShadow.cpp Core\UIBase.cpp Core\UIContainer.cpp Core\UIControl.cpp Core\UIDlgBuilder.cpp Core\UIManager.cpp Core\UIMarkup.cpp Core\UIRender.cpp Layout\UIChildLayout.cpp Layout\UIHorizontalLayout.cpp Layout\UITabLayout.cpp Layout\UITileLayout.cpp Layout\UIVerticalLayout.cpp Control\UIActiveX.cpp Control\UIButton.cpp Control\UICheckBox.cpp Control\UICombo.cpp Control\UIDateTime.cpp Control\UIEdit.cpp Control\UILabel.cpp Control\UIList.cpp Control\UIOption.cpp Control\UIProgress.cpp Control\UIRichEdit.cpp Control\UIScrollBar.cpp Control\UISlider.cpp Control\UIText.cpp Control\UITreeView.cpp Control\UIWebBrowser.cpp
+         UIAnimation.cpp
+         UIMenu.cpp
+         UITimeEdit.cpp
+         UITransEdit.cpp
+         UISlightTabLayout.cpp
+         UISlippingTabLayout.cpp
+         UIlib.cpp
+         WinImplBase.cpp
+         UIDelegate.cpp
+         Utils.cpp
+         WndShadow.cpp
+         UIBase.cpp
+         UIContainer.cpp
+         UIControl.cpp
+         UIDlgBuilder.cpp
+         UIManager.cpp
+         UIMarkup.cpp
+         UIRender.cpp
+         UIChildLayout.cpp
+         UIHorizontalLayout.cpp
+         正在生成代码...
+         正在编译...
+         UITabLayout.cpp
+         UITileLayout.cpp
+         UIVerticalLayout.cpp
+         UIActiveX.cpp
+         UIButton.cpp
+         UICheckBox.cpp
+         UICombo.cpp
+         UIDateTime.cpp
+         UIEdit.cpp
+         UILabel.cpp
+         UIList.cpp
+         UIOption.cpp
+         UIProgress.cpp
+         UIRichEdit.cpp
+         UIScrollBar.cpp
+         UISlider.cpp
+         UIText.cpp
+         UITreeView.cpp
+         UIWebBrowser.cpp
+         正在生成代码...
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /nologo /W3 /WX- /O1 /Ob1 /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D UILIB_EXPORTS /D _VC80_UPGRADE=0x0600 /D _WINDLL /D _MBCS /GF /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Release\\" /Fd".\Release\vc110.pdb" /Gd /TC /analyze- /errorReport:prompt Utils\stb_image.c
+         stb_image.c
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /nologo /W3 /WX- /O1 /Ob1 /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D UILIB_EXPORTS /D _VC80_UPGRADE=0x0600 /D _WINDLL /D _MBCS /GF /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Release\\" /Fd".\Release\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Utils\XUnzip.cpp
+         XUnzip.cpp
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.0\bin\x86\rc.exe /D NDEBUG /D _VC80_UPGRADE=0x0600 /l"0x0406" /nologo /fo".\Release\DuiLib.res" DuiLib.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\output\DuiLib.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\Program Files (x86)\Visual Leak Detector\lib\Win32" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST:NO /PDB:"..\output\DuiLib.pdb" /TLBID:1 /BASE:"0x11000000" /DYNAMICBASE /NXCOMPAT /IMPLIB:"../lib/DuiLib.lib" /MACHINE:X86 /SAFESEH /DLL .\Release\DuiLib.res
+         .\Release\UIAnimation.obj
+         .\Release\UIMenu.obj
+         .\Release\UITimeEdit.obj
+         .\Release\UITransEdit.obj
+         .\Release\UISlightTabLayout.obj
+         .\Release\UISlippingTabLayout.obj
+         .\Release\StdAfx.obj
+         .\Release\UIlib.obj
+         .\Release\WinImplBase.obj
+         .\Release\stb_image.obj
+         .\Release\UIDelegate.obj
+         .\Release\Utils.obj
+         .\Release\WndShadow.obj
+         .\Release\XUnzip.obj
+         .\Release\UIBase.obj
+         .\Release\UIContainer.obj
+         .\Release\UIControl.obj
+         .\Release\UIDlgBuilder.obj
+         .\Release\UIManager.obj
+         .\Release\UIMarkup.obj
+         .\Release\UIRender.obj
+         .\Release\UIChildLayout.obj
+         .\Release\UIHorizontalLayout.obj
+         .\Release\UITabLayout.obj
+         .\Release\UITileLayout.obj
+         .\Release\UIVerticalLayout.obj
+         .\Release\UIActiveX.obj
+         .\Release\UIButton.obj
+         .\Release\UICheckBox.obj
+         .\Release\UICombo.obj
+         .\Release\UIDateTime.obj
+         .\Release\UIEdit.obj
+         .\Release\UILabel.obj
+         .\Release\UIList.obj
+         .\Release\UIOption.obj
+         .\Release\UIProgress.obj
+         .\Release\UIRichEdit.obj
+         .\Release\UIScrollBar.obj
+         .\Release\UISlider.obj
+         .\Release\UIText.obj
+         .\Release\UITreeView.obj
+         .\Release\UIWebBrowser.obj
+            正在创建库 ../lib/DuiLib.lib 和对象 ../lib/DuiLib.exp
+         DuiLib.vcxproj -> E:\s_imms2.0\trunk\IMMS Control\DuiLib\..\output\DuiLib.dll
+       PostBuildEvent:
+         xcopy "E:\s_imms2.0\trunk\IMMS Control\DuiLib\*.h" "E:\s_imms2.0\trunk\IMMS Control\include\UiLib\" /E /S /Y /D
+         xcopy "E:\s_imms2.0\trunk\IMMS Control\DuiLib\*.tlh" "E:\s_imms2.0\trunk\IMMS Control\include\UiLib\" /E /S /Y /D
+         :VCEnd
+         复制了 0 个文件
+         复制了 0 个文件
+     1>已完成生成项目“E:\s_imms2.0\trunk\IMMS Control\DuiLib\DuiLib.vcxproj”(Rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:12.01

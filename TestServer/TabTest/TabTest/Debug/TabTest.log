@@ -1,0 +1,21 @@
+﻿生成启动时间为 2016/5/27 11:18:35。
+     1>项目“F:\IPMP_CallService\TestServer\TabTest\TabTest\TabTest.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在对“Debug\TabTest.unsuccessfulbuild”执行 Touch 任务。
+       ClCompile:
+         所有输出均为最新。
+       ResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /l"0x0409" /nologo /fo"Debug\TabTest.res" TabTest.rc 
+       ManifestResourceCompile:
+         所有输出均为最新。
+       Link:
+         d:\VS2010\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\output\TabTest.exe" /INCREMENTAL /NOLOGO /LIBPATH:..\lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\TabTest.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"F:\IPMP_CallService\TestServer\TabTest\output\TabTest.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"..\output\TabTest.lib" /MACHINE:X86 Debug\TabTest.res
+         Debug\TabTest.exe.embed.manifest.res
+         Debug\main.obj
+         Debug\MainDlg.obj
+     1>LINK : fatal error LNK1104: 无法打开文件“DuiLib_d.lib”
+     1>已完成生成项目“F:\IPMP_CallService\TestServer\TabTest\TabTest\TabTest.vcxproj”(build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:00.23
