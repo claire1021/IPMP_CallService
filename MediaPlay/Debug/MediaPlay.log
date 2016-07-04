@@ -1,0 +1,98 @@
+﻿生成启动时间为 2016/6/1 19:09:49。
+     1>项目“F:\IPMP_CallService\MediaPlay\MediaPlay.vcxproj”在节点 2 上(rebuild 个目标)。
+     1>_PrepareForClean:
+         正在删除文件“.\Debug\MediaPlay.lastbuildstate”。
+       InitializeBuildStatus:
+         正在创建“.\Debug\MediaPlay.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         d:\VS2010\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _MBCS /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp".\Debug\MediaPlay.pch" /Fo".\Debug\\" /Fd".\Debug\vc100.pdb" /FR".\Debug\\" /Gd /TP /analyze- /errorReport:prompt StdAfx.cpp
+         StdAfx.cpp
+         _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
+         d:\VS2010\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _MBCS /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp".\Debug\MediaPlay.pch" /Fo".\Debug\\" /Fd".\Debug\vc100.pdb" /FR".\Debug\\" /Gd /TP /analyze- /errorReport:prompt MediaPlay.cpp MediaPlayDlg.cpp wmpcdrom.cpp wmpcdromcollection.cpp wmpclosedcaption.cpp wmpcontrols.cpp wmpdvd.cpp wmperror.cpp wmperroritem.cpp wmpmedia.cpp wmpmediacollection.cpp wmpnetwork.cpp wmpplayer4.cpp wmpplayerapplication.cpp wmpplaylist.cpp wmpplaylistarray.cpp wmpplaylistcollection.cpp wmpsettings.cpp wmpstringcollection.cpp
+         wmpstringcollection.cpp
+         wmpsettings.cpp
+         wmpplaylistcollection.cpp
+         wmpplaylistarray.cpp
+         wmpplaylist.cpp
+         wmpplayerapplication.cpp
+         wmpplayer4.cpp
+         wmpnetwork.cpp
+         wmpmediacollection.cpp
+         wmpmedia.cpp
+         wmperroritem.cpp
+         wmperror.cpp
+         wmpdvd.cpp
+         wmpcontrols.cpp
+         wmpclosedcaption.cpp
+         wmpcdromcollection.cpp
+         wmpcdrom.cpp
+         MediaPlayDlg.cpp
+         MediaPlay.cpp
+     1>f:\ipmp_callservice\mediaplay\mediaplay.cpp(52): warning C4996: 'CWinApp::Enable3dControls': CWinApp::Enable3dControls is no longer needed. You should remove this call.
+                 d:\vs2010\vc\atlmfc\include\afxwin.h(5380) : 参见“CWinApp::Enable3dControls”的声明
+         正在生成代码...
+       ResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /D _DEBUG /D _VC80_UPGRADE=0x0600 /D _AFXDLL /l"0x0804" /nologo /fo".\Debug\MediaPlay.res" MediaPlay.rc 
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo".\Debug\MediaPlay.exe.embed.manifest.res" .\Debug\MediaPlay_manifest.rc 
+       Link:
+         d:\VS2010\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Debug\MediaPlay.exe" /INCREMENTAL /NOLOGO /MANIFEST /ManifestFile:".\Debug\MediaPlay.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"F:\IPMP_CallService\MediaPlay\Debug\MediaPlay.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Debug\MediaPlay.lib" /MACHINE:X86 .\Debug\MediaPlay.res
+         .\Debug\MediaPlay.exe.embed.manifest.res
+         .\Debug\MediaPlay.obj
+         .\Debug\MediaPlayDlg.obj
+         .\Debug\StdAfx.obj
+         .\Debug\wmpcdrom.obj
+         .\Debug\wmpcdromcollection.obj
+         .\Debug\wmpclosedcaption.obj
+         .\Debug\wmpcontrols.obj
+         .\Debug\wmpdvd.obj
+         .\Debug\wmperror.obj
+         .\Debug\wmperroritem.obj
+         .\Debug\wmpmedia.obj
+         .\Debug\wmpmediacollection.obj
+         .\Debug\wmpnetwork.obj
+         .\Debug\wmpplayer4.obj
+         .\Debug\wmpplayerapplication.obj
+         .\Debug\wmpplaylist.obj
+         .\Debug\wmpplaylistarray.obj
+         .\Debug\wmpplaylistcollection.obj
+         .\Debug\wmpsettings.obj
+         .\Debug\wmpstringcollection.obj
+       Manifest:
+         正在删除文件“.\Debug\MediaPlay.exe.embed.manifest”。
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:".\Debug\MediaPlay.exe.embed.manifest" /manifest .\Debug\MediaPlay.exe.intermediate.manifest d:\VS2010\VC\Include\Manifest\dpiaware.manifest
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo".\Debug\MediaPlay.exe.embed.manifest.res" .\Debug\MediaPlay_manifest.rc 
+       LinkEmbedManifest:
+         d:\VS2010\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Debug\MediaPlay.exe" /INCREMENTAL /NOLOGO /MANIFEST /ManifestFile:".\Debug\MediaPlay.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"F:\IPMP_CallService\MediaPlay\Debug\MediaPlay.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Debug\MediaPlay.lib" /MACHINE:X86 .\Debug\MediaPlay.res
+         .\Debug\MediaPlay.exe.embed.manifest.res
+         .\Debug\MediaPlay.obj
+         .\Debug\MediaPlayDlg.obj
+         .\Debug\StdAfx.obj
+         .\Debug\wmpcdrom.obj
+         .\Debug\wmpcdromcollection.obj
+         .\Debug\wmpclosedcaption.obj
+         .\Debug\wmpcontrols.obj
+         .\Debug\wmpdvd.obj
+         .\Debug\wmperror.obj
+         .\Debug\wmperroritem.obj
+         .\Debug\wmpmedia.obj
+         .\Debug\wmpmediacollection.obj
+         .\Debug\wmpnetwork.obj
+         .\Debug\wmpplayer4.obj
+         .\Debug\wmpplayerapplication.obj
+         .\Debug\wmpplaylist.obj
+         .\Debug\wmpplaylistarray.obj
+         .\Debug\wmpplaylistcollection.obj
+         .\Debug\wmpsettings.obj
+         .\Debug\wmpstringcollection.obj
+         MediaPlay.vcxproj -> F:\IPMP_CallService\MediaPlay\.\Debug\MediaPlay.exe
+       BscMake:
+         d:\VS2010\VC\bin\bscmake.exe /nologo /o".\Debug\MediaPlay.bsc" .\Debug\MediaPlay.sbr .\Debug\MediaPlayDlg.sbr .\Debug\StdAfx.sbr .\Debug\wmpcdrom.sbr .\Debug\wmpcdromcollection.sbr .\Debug\wmpclosedcaption.sbr .\Debug\wmpcontrols.sbr .\Debug\wmpdvd.sbr .\Debug\wmperror.sbr .\Debug\wmperroritem.sbr .\Debug\wmpmedia.sbr .\Debug\wmpmediacollection.sbr .\Debug\wmpnetwork.sbr .\Debug\wmpplayer4.sbr .\Debug\wmpplayerapplication.sbr .\Debug\wmpplaylist.sbr .\Debug\wmpplaylistarray.sbr .\Debug\wmpplaylistcollection.sbr .\Debug\wmpsettings.sbr .\Debug\wmpstringcollection.sbr
+       FinalizeBuildStatus:
+         正在删除文件“.\Debug\MediaPlay.unsuccessfulbuild”。
+         正在对“.\Debug\MediaPlay.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“F:\IPMP_CallService\MediaPlay\MediaPlay.vcxproj”(rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:06.09

@@ -1,6 +1,6 @@
 1、首次请求：建立连接，请求所有会议室名字
       发送：
-				  {"m_op"       :   "selectMr",
+				  {"m_op"       :   "selectMR",
 				   "m_object" :  "CallService"}
 	  返回：{"Nums":   18
 	              "mrs"    :    "mr1,mr2,mr3......." }

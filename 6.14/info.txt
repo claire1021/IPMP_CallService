@@ -1,0 +1,93 @@
+[
+   {
+      "addr" : "一楼",
+      "end_time" : "2016-03-03 12:00:00",                          
+      "meet_title" : "sssr",
+      "mr_name" : "420",
+      "seats" : [
+         {
+            "s_left" : "434",
+            "s_num" : "0",
+            "s_state" : "0",
+            "s_top" : "196"
+         },
+         {
+            "s_left" : "506",
+            "s_num" : "1",
+            "s_state" : "0",
+            "s_top" : "45"
+         },
+         {
+            "s_left" : "408",
+            "s_num" : "2",
+            "s_state" : "0",
+            "s_top" : "56"
+         },
+         {
+            "s_left" : "319",
+            "s_num" : "3",
+            "s_state" : "0",
+            "s_top" : "104"
+         },
+         {
+            "s_left" : "250",
+            "s_num" : "4",
+            "s_state" : "0",
+            "s_top" : "186"
+         },
+         {
+            "s_left" : "228",
+            "s_num" : "5",
+            "s_state" : "0",
+            "s_top" : "298"
+         },
+         {
+            "s_left" : "291",
+            "s_num" : "6",
+            "s_state" : "0",
+            "s_top" : "402"
+         },
+         {
+            "s_left" : "432",
+            "s_num" : "7",
+            "s_state" : "0",
+            "s_top" : "420"
+         },
+         {
+            "s_left" : "585",
+            "s_num" : "8",
+            "s_state" : "0",
+            "s_top" : "370"
+         },
+         {
+            "s_left" : "610",
+            "s_num" : "9",
+            "s_state" : "0",
+            "s_top" : "239"
+         },
+         {
+            "s_left" : "644",
+            "s_num" : "10",
+            "s_state" : "0",
+            "s_top" : "135"
+         },
+         {
+            "s_left" : "607",
+            "s_num" : "11",
+            "s_state" : "0",
+            "s_top" : "50"
+         }
+      ],
+      "start_time" : "2016-03-03 10:00:00",
+      "users" : [
+         {
+            "s_num" : "0",
+            "user_name" : "liusha"
+         },
+         {
+            "s_num" : "1",
+            "user_name" : "syq"
+         }
+      ]
+   }
+]

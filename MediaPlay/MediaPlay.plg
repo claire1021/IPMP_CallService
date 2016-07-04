@@ -1,0 +1,123 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MediaPlay - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP13B.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/MediaPlay.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\Program Files\Microsoft Visual Studio\Program\MediaPlay\MediaPlay.cpp"
+"D:\Program Files\Microsoft Visual Studio\Program\MediaPlay\MediaPlayDlg.cpp"
+"D:\Program Files\Microsoft Visual Studio\Program\MediaPlay\wmpcdrom.cpp"
+"D:\Program Files\Microsoft Visual Studio\Program\MediaPlay\wmpcdromcollection.cpp"
+"D:\Program Files\Microsoft Visual Studio\Program\MediaPlay\wmpclosedcaption.cpp"
+"D:\Program Files\Microsoft Visual Studio\Program\MediaPlay\wmpcontrols.cpp"
+"D:\Program Files\Microsoft Visual Studio\Program\MediaPlay\wmpdvd.cpp"
+"D:\Program Files\Microsoft Visual Studio\Program\MediaPlay\wmperror.cpp"
+"D:\Program Files\Microsoft Visual Studio\Program\MediaPlay\wmperroritem.cpp"
+"D:\Program Files\Microsoft Visual Studio\Program\MediaPlay\wmpmedia.cpp"
+"D:\Program Files\Microsoft Visual Studio\Program\MediaPlay\wmpmediacollection.cpp"
+"D:\Program Files\Microsoft Visual Studio\Program\MediaPlay\wmpnetwork.cpp"
+"D:\Program Files\Microsoft Visual Studio\Program\MediaPlay\wmpplayer4.cpp"
+"D:\Program Files\Microsoft Visual Studio\Program\MediaPlay\wmpplayerapplication.cpp"
+"D:\Program Files\Microsoft Visual Studio\Program\MediaPlay\wmpplaylist.cpp"
+"D:\Program Files\Microsoft Visual Studio\Program\MediaPlay\wmpplaylistarray.cpp"
+"D:\Program Files\Microsoft Visual Studio\Program\MediaPlay\wmpplaylistcollection.cpp"
+"D:\Program Files\Microsoft Visual Studio\Program\MediaPlay\wmpsettings.cpp"
+"D:\Program Files\Microsoft Visual Studio\Program\MediaPlay\wmpstringcollection.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP13B.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP13C.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/MediaPlay.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\Program Files\Microsoft Visual Studio\Program\MediaPlay\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP13C.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP13D.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/MediaPlay.pdb" /debug /machine:I386 /out:"Debug/MediaPlay.exe" /pdbtype:sept 
+".\Debug\MediaPlay.obj"
+".\Debug\MediaPlayDlg.obj"
+".\Debug\StdAfx.obj"
+".\Debug\wmpcdrom.obj"
+".\Debug\wmpcdromcollection.obj"
+".\Debug\wmpclosedcaption.obj"
+".\Debug\wmpcontrols.obj"
+".\Debug\wmpdvd.obj"
+".\Debug\wmperror.obj"
+".\Debug\wmperroritem.obj"
+".\Debug\wmpmedia.obj"
+".\Debug\wmpmediacollection.obj"
+".\Debug\wmpnetwork.obj"
+".\Debug\wmpplayer4.obj"
+".\Debug\wmpplayerapplication.obj"
+".\Debug\wmpplaylist.obj"
+".\Debug\wmpplaylistarray.obj"
+".\Debug\wmpplaylistcollection.obj"
+".\Debug\wmpsettings.obj"
+".\Debug\wmpstringcollection.obj"
+".\Debug\MediaPlay.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP13D.tmp"
+<h3>Output Window</h3>
+Compiling...
+StdAfx.cpp
+Compiling...
+MediaPlay.cpp
+MediaPlayDlg.cpp
+wmpcdrom.cpp
+wmpcdromcollection.cpp
+wmpclosedcaption.cpp
+wmpcontrols.cpp
+wmpdvd.cpp
+wmperror.cpp
+wmperroritem.cpp
+wmpmedia.cpp
+wmpmediacollection.cpp
+wmpnetwork.cpp
+wmpplayer4.cpp
+wmpplayerapplication.cpp
+wmpplaylist.cpp
+wmpplaylistarray.cpp
+wmpplaylistcollection.cpp
+wmpsettings.cpp
+wmpstringcollection.cpp
+Generating Code...
+Linking...
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP13E.tmp" with contents
+[
+/nologo /o"Debug/MediaPlay.bsc" 
+".\Debug\StdAfx.sbr"
+".\Debug\MediaPlay.sbr"
+".\Debug\MediaPlayDlg.sbr"
+".\Debug\wmpcdrom.sbr"
+".\Debug\wmpcdromcollection.sbr"
+".\Debug\wmpclosedcaption.sbr"
+".\Debug\wmpcontrols.sbr"
+".\Debug\wmpdvd.sbr"
+".\Debug\wmperror.sbr"
+".\Debug\wmperroritem.sbr"
+".\Debug\wmpmedia.sbr"
+".\Debug\wmpmediacollection.sbr"
+".\Debug\wmpnetwork.sbr"
+".\Debug\wmpplayer4.sbr"
+".\Debug\wmpplayerapplication.sbr"
+".\Debug\wmpplaylist.sbr"
+".\Debug\wmpplaylistarray.sbr"
+".\Debug\wmpplaylistcollection.sbr"
+".\Debug\wmpsettings.sbr"
+".\Debug\wmpstringcollection.sbr"]
+Creating command line "bscmake.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP13E.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+MediaPlay.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

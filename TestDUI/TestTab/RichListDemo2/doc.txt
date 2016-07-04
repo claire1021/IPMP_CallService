@@ -1,0 +1,170 @@
+duilib
+1.工具库：
+	由于duilib没有对外部的任何库进行依赖，所以在其内部实现了很多用于之臣项目的基础类，这些类分布在Util文件夹中：
+	UI相关：CPoint/CSize/CDuiRect
+	简单容器：CStdPtrArray/CStdValArray/CStdString/CStdStringPtrMap
+	窗口工具：WindowImplBase
+
+2.控件库：
+   控件库在duilib的实现中被分为两块：Core和Control
+   Core中包含的是所有空间公用的部分，里面主要是一些积累和绘制的封装
+   Control中包含的就是各个不同的控件的行为了
+
+   2.1 duilib-core
+   控件基类：CControlUI
+   CControlUI是所有空间的基类，也是组成控件树的基本元素，控件树中所有的节点都是一个CControlUI
+   他包括了所有控件公共的属性，如：位置，大小，颜色，是否有焦点，是否被启用。还包括了很多基础函数，用于重载来实现子控件，如获取控件名称和ClassName，是否显示
+
+	   为了方便从xml中直接解析出空间的各个属性，这个类中还在提供了一个SetAttribute的方法，传入字符串的属性名称和值对特定的属性进行设置
+	   每隔空间中海油几个事件管理的对象---CEventSource，这些对象会在特定的时机被触发，如OnInit，调用其中保存的各个回调函数。
+
+       2.1.1控件类型转换
+	   CControlUI::GetInterface,传入一个字符串，传出指向控件的指针。
+	   LPVOID CControlUI::GetInterface(LPCTSTRpstrName){
+			if(_tcscmp(pstrName,_T("Control"))==0)  return this;
+			return NULL;
+	   }
+
+  2.2 容器基类CContainerUI
+	   有了基本的控件基类之后，我们需要容器将他管理起来，这个容器就是CContainerUI，其内部用一个数组来保存所有的CControlUI的对象，后续的所有工作，都是基于这个
+	   对象来进行了。这样在CContainerUI里面，主要实现了一下几个功能：
+	   
+	 子控件的查找：CContrainerUI::FindControl
+		  子控件的生命周期管理：是否销毁（在Remove的时候自动销毁）/是否延迟销毁（交给CPainManagerUI 一起去销毁）
+     滚动条：
+	      所有的容器都支持滚动条，在其内部会对键盘和鼠标滚轮事件进行处理（CContainerUI::DoEvent），对其内部所有的元素调整位置，最后在绘制的时候实现滚动的效果
+     
+	 绘制：由于容器中有很多元素，所以为了加快 容器的绘制，绘制的时候会获取其真正需要绘制的区域，如果子控件不在此区域中，那么就不予绘制了
+
+   2.3 控件实现 duilib-control
+
+	   有了普通的基类和容器的基类之后，我们就可以在其之上大家控件了，其类图大致如下：
+	   2.3.1基本控件
+	   duilib实现了非常多的基本控件，他们分布在Control文件夹下，每一个头文件就是一个控件，主要有：
+	   CLabelUI/CTextUI/CEditUI/CRichEditUI
+	   CButtonUI/CCheckBoxUI/COptionUI(RadioButton)
+	   CScrollBarUI/CProgressUI/CSliderUI
+
+	   CListUI
+	   CDateTimeUI/CActiveXUI/CWebBrowserUI
+
+	   2.3.2  Layout
+
+	   除了基本空间之外，duilib为了辅助大家对界面元素进行布局，还在中加实现了专门用于Layout的元素:
+	   CChildLayoutUI
+	   CHorizontalLayoutUI/CVerticallLayoutUI/CTileLayoutUI:纵向排列，横向排列，格子排列
+
+	   CTabLayoutUI:Tab
+
+	   2.3.3控件绘制
+	   绘制控件实际上有很多代码都是可以抽取出来的，比如：
+
+
+   2.4控件管理： CPaintManagerUI
+      当这些基本的控件都准备好了之后，我们就只要将这些控件管理起来，这样一个基本的控件库就完成了，这个管理就是CPaintMangerUI来负责的。
+	  在duilib中，一个Windows的原声窗口和一个CPaintManagerUI一一对应。其主要负责如下几个内容
+	  控件管理：
+	  资源管理
+	  转化并分发window原声窗口消息
+	  为了实现上面这些功能，其中有一个用于管理控件和资源的关键的数据结构：
+	  m_pRoot:保存根控件的节点
+	  m_mNameHash:保存控件名称Hash和空间对象指针的关系
+	  m_mOptionCroup:保存控件相关的Group，这个Group并不是TabOrder，他用于实现Option控件
+	  m_aCustomFonts:用来管理字体资源
+	  m_mImageHash:用来管理图片资源
+3.消息流转
+   有了控件，现在我们的问题是，如何将原生的窗口消息分发给界面中所有的空间，是其行为和原生的一样
+    3.1 窗口基础类 ：CWindowWnd
+	在duilib中，用阿里表示窗口的最基础的类是CWindowWnd，在这个类中实现了基本的内容：
+	原声窗口的创建（CWindowWnd::Create）
+	Subclass(CWindowWnd::HandleMessage)
+	最基本的消息处理函数(CWindowWnd::__WndProc)和消息分发(CWindowWnd::ShowModel)
+	duilib通过这个类，将原声窗口的消息分发给其派生类，最后传给整个控件体系。另外在duilib中，
+	需要进行消息处理的基本控件，都是从这个类继承出来的
+
+	3.2消息分发
+	一旦我们使用CWindowWnd类创建了窗口之后，消息就会通过CWindowWnd::HandleMessage进行分发，
+我们可以和WTL等其他库一样，在此对原始的窗口消息进行处理。
+
+	LRESULT CWindowWnd::HandleMessage(UINTuMsg,WPARAMwParam,LPARAMIParam){
+		return ::CallWindowProc(m_OldWndProc,m_hWnd,uMsg,wParam,lPaaram);
+	}
+	当然如果我们觉得这样麻烦，也可以使用CPaintManager()中，其内部会对很多窗口消息进行处理，并
+将其分发到对应的空间上去，比如对WM_LBUTTONDOWN的处理
+	case WM_LBUTTONDOWN:{
+		POINT pt = (GET_X_LPARAM(lParm),GET_Y_LPARAM(lParam));
+		m_ptLastMousePos = pt;
+		CControlUI * pControl=FindControl(pt);
+		//.....
+		TEventUI event = (0);
+		event.Type = UIEVENT_BUTTONDOWN;
+		//....
+		pControl->Event(event);
+		break;
+	}
+
+	3.2.1Focus&Capture
+	通过上面这个最简单的例子，我们基本可以猜到duilib对Focus和Capture的处理方法了：
+用一个成员变量保存对应的控件，在消息到达时直接转发消息。
+    在CPaintManagerUI中，大家可以找到一个成员变量:m_pFocus，这个就是用来保存焦点控件的。在WM_KEYDOWN等键盘消息发生时，
+duilib就会模拟windows行为，将消息直接转给当前Focus的控件。
+	case WM_KEYDOWN：{
+		if(m_pFocus==NULL)  break;
+		TEventUI event = {0};
+		//.....
+		m_pFocus->Event(event);
+		//....
+		break;
+	}
+
+	3.2.2. 其他消息分发方式
+	 除了Event以外，CPaintManagerUI还提供了其他集中用于处理消息的方法：
+	 Notifier:在窗口上处理一些控件的逻辑，可以将其看成和WM_NOTIFY差不多的功能
+	 PreMessageFileter:消息预处理
+	 PostPaint:绘制后的回调
+	 TranslateAccelerator:快捷键的处理
+	 PreMessageFileter和TranslateAccelerator是通过全局数组来实现的，这并不符合多线程的窗口编程要求，所以duilib对多线程的支持并不是很好！
+
+ 3.3. WindowImplBase
+	为了简化duilib的使用，库中提供了一个非常方便的工具:WindowImplBase，
+	这个类将常用的功能封装在其内部，比如Notifier和PreMessageFilter，并在其中提供了各种默认的虚回调函数，巩派生类重载。通过这个类，
+我们可以非常方便来实现一个简单的界面。
+    classUILIB_APIWindowImplBase:public CWindowWnd,public CNotifiUI,public MessageFilterUI,public DialogBuilderCallback{
+		//....
+		virtual 
+	
+	}
+
+4.资源组织和皮肤加载
+   已经有了控件管理和控件库，现在我们需要让UI框架来帮忙组织这些资源，并且自动的来帮我们创建皮肤，减少我们的开发量
+   duilib中的皮肤文件主要有几个部分组成：
+   xml描述文件：描述窗口中控件的布局和样式
+   各种资源
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+   
+
+	

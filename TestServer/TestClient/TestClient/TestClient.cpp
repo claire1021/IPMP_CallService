@@ -13,6 +13,9 @@
 #include"../json/json.h"
 using namespace std;
 
+char recvBuf[4096];
+char sendBuf[4096];
+
 int getConn(){
 	
 			WORD wVersionRequested;
@@ -47,20 +50,11 @@ int getConn(){
 			if(retVal>0){
 				printf("socket connect succedd! socket retVal=%d\n",retVal);
 			}
-
-			char recvBuffer[BUF_SIZE];
-
-			memset(recvBuffer,0,sizeof(recvBuffer));
-			recv(sockClient,recvBuffer,BUF_SIZE,0);
-			printf("%s\n",recvBuffer);
-			send(sockClient,recvBuffer,sizeof(recvBuffer),0);
-	//		closesocket(sockClient);
-		//	WSACleanup();
 			return sockClient;
 }
 
 void closeSocket(int fd){
-	closesocket(sockClient);
+	closesocket(fd);
 	WSACleanup();
 }
 
@@ -68,30 +62,44 @@ int _tmain(int argc, _TCHAR* argv[])
 {
 	int fd;
 	fd = getConn();
-	
-	Json::Value root;
-	root["m_object"] = Json::Value("CallService");
-	root["m_op"] = Json::Value("selectMr");
+	printf("fd=%d\n",fd);
 
+	//封装json
+	Json::Value root;
+	Json::Reader reader;
 	Json::FastWriter fw;
-	char sendBuf[1024];
+
+	root["m_object"] = Json::Value("CallService");
+	root["m_op"] = Json::Value("selectMR");
+				
+				
 	memset(sendBuf,0,sizeof(sendBuf));                       
+	memset(recvBuf,0,sizeof(recvBuf));                       
 	strcpy(sendBuf,(fw.write(root)).c_str());
 	//发送数据
-	sendBuf[strlen(sendBuf)] = '\0';
-	send(fd,sendBuf,strlen(sendBuf)+1,0);*/
-	
-	
-	//接收数据
-	char recvBuf[1024];
-	int end = recv(sockClient,recvBuf,1024,0);
-	recvBuf[end]='\0';//读取结束
-	Json::Reader reader;
+	int ret = send(fd,sendBuf,sizeof(sendBuf),0);
+	if(ret==-1){
+		printf("send err:%d\n",ret);
+	}
+	recv(fd,recvBuf,sizeof(recvBuf),0);
+
+	printf("%s\n",recvBuf);
+
+	//解析接收数据
 	reader.parse(recvBuf,root);
-	char * stemp = U2G(recvBuf);
-	string ltate = root["code"].asString(); 
-	const char * logstate = ltate.c_str();
-	
+		
+	Json::Value roomArray = root["MRS"];                //成员函数，可供选择的会议室数目
+	int size = roomArray.size();
+printf("size of roomNum = %d\n",size);
+
+		for(int i=0;i<size;i++){
+			int name = roomArray[i]["meetroom_name"].asInt();
+			printf("%d\n",name);
+		}
+
+		
+		//---------------------------------------------------------------------------------
+
 	closesocket(fd);
 	printf("i'm here\n");
 	system("pause");
